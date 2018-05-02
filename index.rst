@@ -8,9 +8,26 @@ Welcome to Agate's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
 
+   presentation/index
+   administrator-guide/index
 
+.. toctree::
+   :maxdepth: 2
+   :caption: User Guides
+
+   web-user-guide/index
+   python-user-guide/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: API
+
+   oauth2-api/index
+   oauth2-api/authorization-code-grant-flow
+   oauth2-api/resource-owner-password-credentials-grant-flow
+   oauth2-api/openid-connect-flow
 
 Indices and tables
 ==================
