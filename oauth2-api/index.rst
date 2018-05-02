@@ -6,7 +6,7 @@ Summary
 
 Agate exposes web services that implements the OAuth2 protocol. OAuth2 is an open authorization protocol which enables applications to access each others data. The authorization refers to the fact that these data are accessed on behalf of a resource owner.
 
-For more details, the OAuth2 specifications are available at RFC6749. See also the OpenID Connect specifications built on top of OAuth2.
+For more details, the OAuth2 specifications are available at `RFC6749 <http://tools.ietf.org/html/rfc6749>`_. See also the `OpenID Connect <http://openid.net/specs/openid-connect-core-1_0.html>`_ specifications built on top of OAuth2.
 
 Roles
 -----
@@ -39,6 +39,6 @@ The scopes are space-separated the application IDs, optionally qualified by a pe
 Flows
 -----
 
-* :doc:`authorization-code-grant-flow`: when a client application wants access to the resources of a resource owner, hosted on a resource server, the client application must first obtain an authorization code grant from the authorization server (Agate).
+* :doc:`authorization-code-grant-flow`: when a client application wants access to the resources of a resource owner, hosted on a resource server, the client application must first obtain an `authorization code grant <https://tools.ietf.org/html/rfc6749#section-4.1>`_ from the authorization server (Agate).
 * :doc:`resource-owner-password-credentials-grant-flow`: suitable for clients capable of obtaining the resource owner's credentials (username and password),
 * :doc:`openid-connect-flow`: when client wants to get the user information from Agate (authorization and resource are the same).

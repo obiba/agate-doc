@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Agate'
-copyright = u'2018, Obiba'
-author = u'Obiba'
+copyright = u'2018, OBiBa'
+author = u'OBiBa'
 
 # The short X.Y version
 version = u''
@@ -157,3 +157,6 @@ texinfo_documents = [
 
 
 # -- Extension configuration -------------------------------------------------
+
+def setup(app):
+    app.add_stylesheet('css/custom.css')

@@ -28,10 +28,3 @@ Welcome to Agate's documentation!
    oauth2-api/authorization-code-grant-flow
    oauth2-api/resource-owner-password-credentials-grant-flow
    oauth2-api/openid-connect-flow
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

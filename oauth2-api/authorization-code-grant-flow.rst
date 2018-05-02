@@ -4,7 +4,7 @@ Authorization Code Grant Flow
 Summary
 -------
 
-When a client application wants access to the resources of a resource owner, hosted on a resource server, the client application must first obtain an authorization code grant from the authorization server (Agate). The following explains how such a grant is obtained.
+When a client application wants access to the resources of a resource owner, hosted on a resource server, the client application must first obtain an `authorization code grant <https://tools.ietf.org/html/rfc6749#section-4.1>`_ from the authorization server (Agate). The following explains how such a grant is obtained.
 
 Step 1. Authorization
 ---------------------
@@ -183,7 +183,7 @@ Step 3. Resource Access
 
 The client application will use the access token as a bearer of resource owner identity to get the resource from the resource server. How the access token should be passed to the resource application is out of the concern of Agate.
 
-Most common practice (this is the case for Opal and Mica) is that the access token is placed in the headers of the HTTP request issued by the client application on the resource server. This can be expressed as a curl command:
+Most common practice (this is the case for Opal and Mica) is that the access token is placed in the headers of the HTTP request issued by the client application on the resource server. This can be expressed as a `curl <https://curl.haxx.se/>`_ command:
 
 .. code-block:: bash
 
