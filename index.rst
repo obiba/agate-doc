@@ -10,8 +10,9 @@ Welcome to Agate's documentation!
    :maxdepth: 2
    :caption: Contents
 
-   presentation/index
-   administrator-guide/index
+   presentation
+   installation
+   configuration
 
 .. toctree::
    :maxdepth: 2

@@ -5,3 +5,9 @@
 .ethical-rtd {
     display: none;
 }
+
+.rst-content blockquote {
+    border-left: solid 4px #ccc;
+    padding: 10px;
+    font-size: smaller;
+}
