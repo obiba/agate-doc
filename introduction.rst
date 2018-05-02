@@ -1,12 +1,16 @@
 Introduction
 ============
 
+.. _domain:
+
 Users, Groups and Applications
 ------------------------------
 
 The following diagram describes the domain handled by Agate. Each entity of this domain can be edited individually in the Agate Web Application administration interface.
 
 .. image:: images/agate-domain.png
+
+.. _domain-user:
 
 User
 ~~~~
@@ -17,12 +21,16 @@ A user can belong to some groups.
 
 A user can have access to some applications. If no application is provided, the user can only access to Agate. Otherwise, listed applications will have the user authenticated by Agate.
 
+.. _domain-group:
+
 Group
 ~~~~~
 
 A group is uniquely identified by its name. A group can be associated to one or applications.
 
 Members of a group can have access to the applications associated to it.
+
+.. _domain-application:
 
 Application
 ~~~~~~~~~~~

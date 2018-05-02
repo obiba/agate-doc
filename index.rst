@@ -12,7 +12,7 @@ Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which 
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents
+   :caption: Administrator Guide
 
    introduction
    installation
@@ -23,6 +23,11 @@ Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which 
    :caption: Web User Guide
 
    web-user-guide/index
+   web-user-guide/users
+   web-user-guide/groups
+   web-user-guide/applications
+   web-user-guide/tickets
+   web-user-guide/administration
 
 .. toctree::
    :maxdepth: 1
