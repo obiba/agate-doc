@@ -1,5 +1,5 @@
-OAuth2 API
-==========
+Introduction
+============
 
 Summary
 -------

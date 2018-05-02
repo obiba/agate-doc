@@ -11,7 +11,7 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
 Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which intends to be easy to install and to use. Agate centralizes also some user related services such as profile management, and a notification system using emails.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents
 
    introduction
@@ -19,15 +19,22 @@ Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which 
    configuration
 
 .. toctree::
-   :maxdepth: 2
-   :caption: User Guides
+   :maxdepth: 1
+   :caption: Web User Guides
 
    web-user-guide/index
-   python-user-guide/index
 
 .. toctree::
-   :maxdepth: 2
-   :caption: API
+   :maxdepth: 1
+   :caption: Python User Guides
+
+   python-user-guide/index
+   python-user-guide/add-user
+   python-user-guide/delete-user
+
+.. toctree::
+   :maxdepth: 1
+   :caption: OAuth2 API
 
    oauth2-api/index
    oauth2-api/authorization-code-grant-flow
