@@ -10,7 +10,7 @@ Welcome to Agate's documentation!
    :maxdepth: 2
    :caption: Contents
 
-   presentation
+   introduction
    installation
    configuration
 
