@@ -1,9 +1,6 @@
 Introduction
 ============
 
-Summary
--------
-
 Agate exposes web services that implements the OAuth2 protocol. OAuth2 is an open authorization protocol which enables applications to access each others data. The authorization refers to the fact that these data are accessed on behalf of a resource owner.
 
 For more details, the OAuth2 specifications are available at `RFC6749 <http://tools.ietf.org/html/rfc6749>`_. See also the `OpenID Connect <http://openid.net/specs/openid-connect-core-1_0.html>`_ specifications built on top of OAuth2.
