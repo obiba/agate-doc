@@ -1,5 +1,5 @@
-Introduction
-============
+Web Introduction
+================
 
 The Agate Web Application is the administration web interface of the Agate server. It is NOT the end-user web portal and therefore firewall policies can (or should) be applied to restrict access to administrators or content editors.
 

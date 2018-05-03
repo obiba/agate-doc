@@ -1,5 +1,5 @@
-Introduction
-============
+Python Introduction
+===================
 
 Agate Python client, a command line scripting tool written in Python, enables automation of tasks in a Agate server.
 
