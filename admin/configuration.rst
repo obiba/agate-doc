@@ -24,72 +24,45 @@ MongoDB Server Configuration
 
 Agate server will store its data (system configuration, networks, studies, datasets, etc.) in a MongoDB database. You must specify how to connect to this database.
 
-======================== ========================
-Property                 Description
-======================== ========================
-``mongodb.url``          MongoDB host and port names using the format: host:port
-``mongodb.databaseName`` Name of the Agate server database in MongoDB. If it does not exist it will be automatically created.
-``mongodb.username``     User name for connection to MongoDB database.
-``mongodb.password``     User password for connection to MongoDB database.
-``mongodb.authSource``   The name of the authentication database.
-``mongodb.options``      Read Connection Options to learn more. Do not include the uri. in the URL.
-======================== ========================
+=========================== ===========================
+Property                    Description
+=========================== ===========================
+``spring.data.mongodb.uri`` MongoDB URI. `Read Standard Connection <https://docs.mongodb.com/manual/reference/connection-string/>`_ String Format to learn more.
+=========================== ===========================
 
-By default MongoDB does not require any user name, it is highly recommended to configure the database with a user. This can be done by enabling the Client Access Control procedure:
+By default MongoDB does not require any user name, it is highly recommended to configure the database with a user. This can be done by enabling the Client Access Control procedure.
+
+Follow these steps to enable the Client Access Control on your server:
 
 * create a user with the proper roles on the target databases
 * restart the MongoDB service with Client Access Control enabled
 
-Once the MongoDB service runs with Client Access Control enabled, all database connections require authentication.
+.. note::
 
-**MongoDB 3.x Settings**
-
-The default authentication mechanism has changed since MongoDB 3.0 and the driver used by Agate does not support (yet) this new mechanism. According to the documentation about the authentication mechanisms:
-
-.. epigraph::
-
-  MongoDB uses the SCRAM-SHA-1 as the default challenge and response authentication mechanism. Previous versions used MONGODB-CR as the default.
-
-Then before creating the user, restore ``MONGODB-CR`` as the default mechanism with the following script:
-
-.. code-block:: javascript
-
-  use admin
-  var schema = db.system.version.findOne({"_id" : "authSchema"})
-  schema.currentVersion = 3
-  db.system.version.save(schema)
+  Once the MongoDB service runs with Client Access Control enabled, all database connections require authentication.
 
 **MongoDB User Creation Example**
 
-The example below creates the agateadmin user for agate database:
+The example below creates the *agateadmin* user for *agate* database:
 
 .. code-block:: javascript
 
   use admin
-  db.createUser(
-    {
-      user: "agateadmin",
-      pwd: "agateadmin",
-      roles: [
-        {
-          "role" : "readWrite",
-          "db" : "agate"
-        },
-        {
-          "role" : "dbAdmin",
-          "db" : "agate"
-        },
-        {
-            "role": "clusterMonitor",
-            "db": "admin"
-        },
-        {
-            "role": "readAnyDatabase",
-            "db": "admin"
-        }
-      ]
-    }
-  )
+
+  db.createRole({
+    role: 'obibauser',
+    privileges:[{
+        resource: {anyResource: true},
+        actions: ['anyAction']
+    }],
+    roles: []
+  });
+
+  db.createUser({
+    user: "agateadmin",
+    pwd: "agateadmin",
+    roles: ['obibauser']
+  });
 
 Here is the required configuration snippet in **/etc/agate/application.yml** for the above user:
 
@@ -102,7 +75,7 @@ Here is the required configuration snippet in **/etc/agate/application.yml** for
 
 .. note::
 
-  Agate requires either **clusterMonitor** or **readAnyDatabase** role on the admin database for validation operations. The first role is useful for a cluster setup and the latter if your MongoDB is on a single server.
+  Agate requires either **clusterMonitor** or **readAnyDatabase** role on the *admin* database for validation operations. The first role is useful for a cluster setup and the latter if your MongoDB is on a single server.
 
 User Directories
 ----------------
