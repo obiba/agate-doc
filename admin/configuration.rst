@@ -185,3 +185,20 @@ Example of Apache directives that:
       ProxyPass / https://localhost:8444/
       ProxyPassReverse / https://localhost:8444/
   </VirtualHost>
+
+For performance, you can also activate Apache's compression module (mod_deflate) with the following settings (note the json content type setting) in file */etc/apache2/mods-available/deflate.conf*:
+
+.. code-block:: text
+
+  <IfModule mod_deflate.c>
+    <IfModule mod_filter.c>
+        # these are known to be safe with MSIE 6
+        AddOutputFilterByType DEFLATE text/html text/plain text/xml
+        # everything else may cause problems with MSIE 6
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE application/x-javascript application/javascript application/ecmascript
+        AddOutputFilterByType DEFLATE application/rss+xml
+        AddOutputFilterByType DEFLATE application/xml
+        AddOutputFilterByType DEFLATE application/json
+    </IfModule>
+  </IfModule>
