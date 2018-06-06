@@ -1,13 +1,10 @@
 Configuration
 =============
 
-Servers
--------
-
 The file **AGATE_HOME/conf/application.yml** is to be edited to match your server needs. This file is written in YAML format allowing to specify a hierarchy within the configuration keys. The YAML format uses indentations to express the different levels of this hierarchy. The file is already pre-filled with default values (to be modified to match your configuration), just be aware that you should not modify the indentations. In the following documentation, the configuration keys will be presented using the dot-notation (levels are separated by dots) for readability.
 
 HTTP Server Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 Agate server is a web application and as such, you need to specify on which ports the web server should listen to incoming requests.
 
@@ -20,7 +17,7 @@ Property        Description
 =============== ==================
 
 MongoDB Server Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 Agate server will store its data (system configuration, networks, studies, datasets, etc.) in a MongoDB database. You must specify how to connect to this database.
 
