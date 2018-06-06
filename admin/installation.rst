@@ -155,6 +155,6 @@ To access Agate with a web browser the following urls may be used (port numbers 
 Troubleshooting
 ~~~~~~~~~~~~~~~
 
-If you encounter an issue during the installation and you can't resolve it, please report it in our `Agate Issue Tracker <https://jira.obiba.org/jira/projects/AGATE>`_.
+If you encounter an issue during the installation and you can't resolve it, please report it in our `Agate Issue Tracker <https://github.com/obiba/agate/issues>`_.
 
 Agate logs can be found in **/var/log/agate**. If the installation fails, always refer to this log when reporting an error.
