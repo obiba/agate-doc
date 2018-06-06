@@ -19,8 +19,8 @@ Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which 
    :maxdepth: 1
    :caption: Administrator Guide
 
-   installation
-   configuration
+   admin/installation
+   admin/configuration
 
 .. toctree::
    :maxdepth: 1

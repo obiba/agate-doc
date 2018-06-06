@@ -55,7 +55,7 @@ Zip Distribution Installation
 
 Agate is also available as a Zip file. To install Agate zip distribution, proceed as follows:
 
-* `Download Agate distribution <https://download.obiba.org/agate/stable/>`_
+* `Download Agate distribution <https://github.com/obiba/agate/releases>`_
 * Unzip the Agate distribution. Note that the zip file contains a root directory named **agate-x.y.z-dist** (where x, y and z are the major, minor and micro releases, respectively). You can copy it wherever you want. You can also rename it.
 * Create an ``AGATE_HOME`` environment variable
 * Separate Agate home from Agate distribution directories (recommended). This will facilitate subsequent upgrades.
