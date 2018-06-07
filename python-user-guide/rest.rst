@@ -1,5 +1,5 @@
-REST API
-========
+Web Services
+============
 
 This command is for advanced users wanting to directly access to the REST API of Agate server.
 
