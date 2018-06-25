@@ -10,6 +10,10 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
 
 Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which intends to be easy to install and to use. Agate centralizes also some user related services such as profile management, and a notification system using emails.
 
+.. warning::
+
+  Agate documentation is in the process of being rewritten. See also the :download:`Agate Documentation Archive <archive/AGATEDOC.pdf>`
+
 .. toctree::
    :maxdepth: 1
 
