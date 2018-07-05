@@ -42,13 +42,10 @@ Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which 
    :caption: Python User Guide
 
    python-user-guide/index
-   python-user-guide/add-user
-   python-user-guide/delete-user
-   python-user-guide/add-group
-   python-user-guide/delete-group
-   python-user-guide/add-application
-   python-user-guide/delete-application
-   python-user-guide/rest
+   python-user-guide/user
+   python-user-guide/group
+   python-user-guide/application
+   python-user-guide/other
 
 .. toctree::
    :maxdepth: 1
