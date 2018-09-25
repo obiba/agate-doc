@@ -46,19 +46,13 @@ The example below creates the *agateadmin* user for *agate* database:
 
   use admin
 
-  db.createRole({
-    role: 'obibauser',
-    privileges:[{
-        resource: {anyResource: true},
-        actions: ['anyAction']
-    }],
-    roles: []
-  });
-
-  db.createUser({
-    user: "agateadmin",
-    pwd: "agateadmin",
-    roles: ['obibauser']
+  db.createUser( {
+    user: "agateadmin", pwd: "agateadmin",
+    roles: [
+         { "role" : "readWrite", "db" : "agate" },
+         { "role" : "dbAdmin", "db" : "agate" },
+         { "role" : "readAnyDatabase", "db": "admin" }
+    ]
   });
 
 Here is the required configuration snippet in **/etc/agate/application.yml** for the above user:
