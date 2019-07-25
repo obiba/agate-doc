@@ -1,7 +1,7 @@
 Realms Management
 =================
 
-A Realm is a data access object that provides authentication capabilites for Agate users user the underlying datasource's specific API to discover authorization data.
+A Realm is a data access object that provides authentication capabilites for Agate users using the underlying datasource's specific API to discover authorization data.
 
 Realm Types
 -----------
