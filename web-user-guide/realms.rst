@@ -1,7 +1,7 @@
 Realms Management
 =================
 
-A Realm is a data access object that provides authentication capabilites for Agate users using the underlying datasource's specific API to discover authorization data.
+A Realm is a data access object that provides authentication capabilities for Agate users using the underlying datasource's specific API to discover authorization data.
 
 Realm Types
 -----------
@@ -36,3 +36,4 @@ Open ID Connect Realm
 ~~~~~~~~~~~~~~~~~~~~~
 
 A realm that uses the OpenID Connect (`OIDC <https://auth0.com/docs/protocols/oidc>`_) protocol to authenticate users.
+:doc:`../oauth2-api/openid-connect-flow` explains the typical authentication flow when using this type of realm.
