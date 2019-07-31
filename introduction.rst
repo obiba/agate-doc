@@ -37,6 +37,8 @@ Application
 
 An application has a name and a key. Each time an external application wants to use the services of Agate, it must provide in the request its name and key. This allows Agate to check the validity of the actions to be performed and the information to be returned.
 
+Its redirect URI is used when authenticating through the :doc:`oauth2-api/openid-connect-flow` to validate the source application.
+
 Authentication Flow
 -------------------
 

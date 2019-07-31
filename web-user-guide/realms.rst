@@ -37,3 +37,6 @@ Open ID Connect Realm
 
 A realm that uses the OpenID Connect (`OIDC <https://auth0.com/docs/protocols/oidc>`_) protocol to authenticate users.
 :doc:`../oauth2-api/openid-connect-flow` explains the typical authentication flow when using this type of realm.
+
+.. note::
+  For agate to authenticate for an :ref:`domain-application`, its redirect URI must be set.
