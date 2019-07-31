@@ -15,7 +15,7 @@ This realm uses a user's Distinguished Name (DN) template to build queries.
 Active Directory Realm
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The only difference between this and the LDAP realm is the query template.
+A realm tailored to a Microsoft Active Directory environment.
 This realm queries by using a combination of a search filter and search base.
 
 SQL Database Realm
