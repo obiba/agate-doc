@@ -35,6 +35,7 @@ Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which 
    web-user-guide/groups
    web-user-guide/applications
    web-user-guide/tickets
+   web-user-guide/realms
    web-user-guide/administration
 
 .. toctree::
