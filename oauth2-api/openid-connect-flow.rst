@@ -3,7 +3,14 @@ OpenID Connect Flow
 
 Summary
 -------
+
 OpenID connect is an extension on top of OAuth2, so the authorization and token endpoints are the same as described in :doc:`index`. Currently the `OpenID Connect <http://openid.net/specs/openid-connect-core-1_0.html>`_ implementation in Agate only supports the authorization code flow.
+
+Agate implements the OpenID Connect configuration discovery specification (scopes, endpoints, algos etc.). The discovery request would look like:
+
+.. code-block:: rest
+
+  GET https://agate.example.org/.well-known/openid-configuration
 
 Step 1. Authorization
 ---------------------
