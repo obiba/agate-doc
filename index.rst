@@ -10,10 +10,6 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
 
 Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which intends to be easy to install and to use. Agate centralizes also some user related services such as profile management, and a notification system using emails.
 
-.. warning::
-
-  Agate documentation is in the process of being rewritten. See also the :download:`Agate Documentation Archive <archive/AGATEDOC.pdf>`
-
 .. toctree::
    :maxdepth: 1
 
@@ -56,3 +52,33 @@ Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which 
    oauth2-api/authorization-code-grant-flow
    oauth2-api/resource-owner-password-credentials-grant-flow
    oauth2-api/openid-connect-flow
+   
+Partners and Funders
+====================
+
+The development of this application was made possible thanks to the support of our partners and funders:
+
+.. |mr-logo| image:: https://www.obiba.org/assets/themes/bootstrap/img/logo-maelstrom.png
+ :height: 60px
+ :target: https://www.maelstrom-research.org/
+
+.. |ep-logo| image:: https://www.obiba.org/assets/themes/bootstrap/img/epigeny.png
+ :height: 40px
+ :target: https://www.epigeny.io/
+
+.. |can-logo| image:: https://www.obiba.org/assets/themes/bootstrap/img/canarie.png
+ :height: 60px
+ :target: https://www.canarie.ca/
+
+.. |ecc-logo| image:: https://www.obiba.org/assets/themes/bootstrap/img/eucanconnect.png
+ :height: 50px
+ :target: https://www.eucanconnect.eu/
+
++------------+------------+------------+------------+
+| |mr-logo|  + |ep-logo|  + |can-logo| + |ecc-logo| +
++------------+------------+------------+------------+
+
+Support
+=======
+
+Please visit `OBiBa support <https://www.obiba.org/pages/support/>`_ page.
