@@ -22,7 +22,7 @@ Scope        Description
 ============ ===================
 ``openid``   User name (required).
 ``email``	   User email address and whether this email was verified (optional).
-``profile``	 User first and last names (optional) and groups.
+``profile``	 User first and last names, groups (optional).
 ``phone``	   User phone (not supported).
 ``address``	 User address (not supported).
 ============ ===================
