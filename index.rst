@@ -21,6 +21,7 @@ Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which 
 
    admin/installation
    admin/configuration
+   admin/pub-configuration
 
 .. toctree::
    :maxdepth: 1
@@ -52,7 +53,7 @@ Agate is the `OBiBa <http://obiba.org/>`_'s central authentication server which 
    oauth2-api/authorization-code-grant-flow
    oauth2-api/resource-owner-password-credentials-grant-flow
    oauth2-api/openid-connect-flow
-   
+
 Partners and Funders
 ====================
 
