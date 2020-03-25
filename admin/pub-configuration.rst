@@ -27,7 +27,7 @@ Page                Description
 
 The template structure is organized in the way that it should not be necessary to override these pages definitions. Instead of that, it is recommended to change/extend the theme/style as described in this guide.
 
-Some template variables are also defined in `libs/settings.ftl <https://github.com/obiba/agate/blob/master/agate-webapp/src/main/resources/_templates/libs/settings.ftl>`_ and can be altered in the file **models/settings.ftl** that would be added in your configuration folder as follows:
+Some template variables (date formats, branding, favicon etc.) are also defined in `libs/settings.ftl <https://github.com/obiba/agate/blob/master/agate-webapp/src/main/resources/_templates/libs/settings.ftl>`_ and can be altered in the file **models/settings.ftl** that would be added in your configuration folder as follows:
 
 .. code-block:: bash
 
