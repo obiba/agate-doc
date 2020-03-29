@@ -85,7 +85,7 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
   version: '3'
   services:
       agate:
-          image: obiba/agate:latest
+          image: obiba/agate
           ports:
                   - "8844:8444"
                   - "8881:8081"
