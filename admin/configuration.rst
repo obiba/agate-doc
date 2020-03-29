@@ -129,11 +129,13 @@ Passwords must be encrypted using shiro-hasher tools (included in Agate tools di
 Notification Emails
 -------------------
 
-Agate offers a notification emails service to the registered applications. Based on email templates, an application can request Agate to send emails to one or more of its users. These templates are defined in the **AGATE_HOME/conf/templates** directory. Agate is using email templates for sending its notifications (email confirmation, reset password etc.).
+Agate offers a notification emails service to the registered applications. Based on email templates, an application can request Agate to send emails to one or more of its users. Agate is using email templates for sending its notifications (email confirmation, reset password etc.).
 
-The email templates specific to an application are located in the directory **AGATE_HOME/conf/templates/<application name>**.
+Some templates are provided by default: see `default templates <https://github.com/obiba/agate/tree/master/agate-webapp/src/main/resources/_templates/notifications>`_ directory. To override these default templates, the new templates are to be defined in the **AGATE_HOME/conf/templates/notifications/** directory, using the same file names and directory structure.
 
-The template engine used for building the email messages is `thymeleaf <http://www.thymeleaf.org/>`_.
+The email templates specific to an application are located in the directory **<templates folder>/notifications/<application name>**.
+
+The template engine used for building the email messages is `FreeMarker <https://freemarker.apache.org/>`_. The default templates are in HTML format, but they could also be written in plain text.
 
 Reverse Proxy Configuration
 ---------------------------

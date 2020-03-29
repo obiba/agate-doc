@@ -73,6 +73,46 @@ Launch Agate. This step will create/update the database schema for Agate and wil
 
 For the administrator accounts, the credentials are "administrator" as username and "password" as password. See User Directories Configuration to change it.
 
+Docker Image Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+OBiBa is an early adopter of the `Docker <https://www.docker.com/>`_ technology, providing its own images from the `Docker Hub repository <https://hub.docker.com/orgs/obiba/repositories>`_.
+
+A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a MongoDB database) would be:
+
+.. code-block:: yaml
+
+  version: '3'
+  services:
+      agate:
+          image: obiba/agate
+          ports:
+                  - "8844:8444"
+                  - "8881:8081"
+          links:
+                  - mongo
+          environment:
+                  - AGATE_ADMINISTRATOR_PASSWORD=password
+                  - MONGO_HOST=mongo
+                  - MONGO_PORT=27017
+                  - RECAPTCHA_SITE_KEY=6Lfo7gYTAAAAAOyl8_MHuH-AVBzRDtpIuJrjL3Pb
+                  - RECAPTCHA_SECRET_KEY=6Lfo7gYTAAAAADym-vSDvPBeBCXaxIprA0QXLk_b
+          volumes:
+                  - /tmp/agate:/srv
+
+Then environment variables that are exposed by this image are:
+
+================================= =========================================================================
+Environment Variable              Description
+================================= =========================================================================
+``JAVA_OPTS``
+``AGATE_ADMINISTRATOR_PASSWORD``  Agate administrator password, required and set at first start.
+``MONGO_HOST``                    MongoDB server host (optional).
+``MONGO_PORT``                    MongoDB server port, default is ``27017``.
+``RECAPTCHA_SITE_KEY``            `reCAPTCHA v2 <https://developers.google.com/recaptcha>`_ site key
+``RECAPTCHA_SECRET_KEY``          `reCAPTCHA v2 <https://developers.google.com/recaptcha>`_ secret key
+================================= =========================================================================
+
 Upgrade
 -------
 

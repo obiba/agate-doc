@@ -12,10 +12,12 @@ The following general configuration properties can be modified:
 Property                                   Description
 ========================================== ==========================================
 Name	                                     The name of the organization using this instance of Agate server. It will be used when sending notification emails.
-Public URL                                 Public base URL of the server. It will be used when sending notification emails.
+Public URL                                 Public base URL of the server. It will be used when sending notification emails and in the OAuth2 settings.
+Portal URL                                 The organization main portal, to go back to the main site form the Agate's public pages.
 Short term timeout                         Ticket expiration timeout in hours.
 Long term timeout                          Ticket expiration timeout in hours when "remember me" option is selected.
 Inactive timeout                           User account expiration timeout in days.
+Sign up enabled                            Whether a user can self register from Agate public pages. This does not prevent from Mica to expose the sign-up feature.
 Sign up form offers to choose the username User name will be extracted from user email.
 ========================================== ==========================================
 
