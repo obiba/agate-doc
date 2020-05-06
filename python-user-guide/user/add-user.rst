@@ -28,7 +28,8 @@ Option                                               Description
 ==================================================== ====================================================
 ``--name NAME``                                      The user name, required and unique.
 ``--email EMAIL``                                    The user email, required and unique.
-``--upassword UPASSWORD``                            The user password, required.
+``--upassword UPASSWORD``                            The user password, required if realm is not specified or if it is Agate's one.
+``--realm REALM``                                    The realm in which the user will authenticate, optional (default is Agate's realm).
 ``--first-name FIRST_NAME``                          The user first name.
 ``--last-name LAST_NAME``                            The user last name.
 ``--applications [APPLICATIONS [APPLICATIONS ...]]`` The applications in which the user can sign-in, space separated.
@@ -54,4 +55,10 @@ Add a new user.
 
 .. code-block:: bash
 
-  agate add-user -ag http://localhost:8081 -u administrator -p password --name user1 --email user1@example.org --applications mica drupal
+  agate add-user -ag http://localhost:8081 -u administrator -p password --name user1 --email user1@example.org --upassword CHANGEME --applications mica drupal
+
+Add a new user from a Keycloak's server that is registered as as an OpenID Connect realm.
+
+.. code-block:: bash
+
+  agate add-user -ag http://localhost:8081 -u administrator -p password --name user1 --email user1@example.org --realm keycloak --groups mica-user --groups opal-user
