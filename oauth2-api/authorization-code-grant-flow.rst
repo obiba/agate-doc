@@ -87,11 +87,15 @@ The REST endpoint to be used is:
 
 The form parameters to be sent within the body of the request are:
 
-client_id	Client application name (required).
-client_secret	Client application secret key (required).
-grant_type	The expected value is: authorization_code (required).
-code	The authorization code from the Step 1 (required).
-redirect_uri	Must match the originally submitted URI (if one was sent).
+==================================== ===================
+Parameter                            Description
+==================================== ===================
+``client_id``	                       Client application name (required).
+``client_secret``	                   Client application secret key (required).
+``grant_type``	                     The expected value is: authorization_code (required).
+``code``         	                   The authorization code from the Step 1 (required).
+``redirect_uri``	                   Must match the originally submitted URI (if one was sent).
+==================================== ===================
 
 Response
 ~~~~~~~~
