@@ -8,13 +8,14 @@ HTTP Server Configuration
 
 Agate server is a web application and as such, you need to specify on which ports the web server should listen to incoming requests.
 
-=============== ==================
-Property        Description
-=============== ==================
-``server.port`` HTTP port number. Generally speaking this port should not be exposed to the web. Use the https port instead.
-``server.host`` Web server host name.
-``https.port``  HTTPS port number.
-=============== ==================
+========================= ==================
+Property                  Description
+========================= ==================
+``server.port``           HTTP port number. Generally speaking this port should not be exposed to the web. Use the https port instead.
+``server.host``           Web server host name.
+``server.context-path``   The URL's context path, starting with a `/`. For instance when setting `/auth`, the base URL will be `https://example.org/auth`.
+``https.port``            HTTPS port number.
+========================= ==================
 
 MongoDB Server Configuration
 ----------------------------

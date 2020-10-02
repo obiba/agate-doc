@@ -1,5 +1,5 @@
-Public Configuration
-====================
+Public Pages Configuration
+==========================
 
 Starting from Agate 2.0, the administration user interface is distinct from the public pages, i.e. pages that are to be accessed by regular users. These pages are based on templates that can be customized, extended or overridden. The template engine that is used is `FreeMarker <https://freemarker.apache.org/>`_ which has a clean and powerful syntax.
 
@@ -36,6 +36,58 @@ Some template variables (date formats, branding, favicon etc.) are also defined 
       └── templates
           └── models
               └── settings.ftl
+
+**General settings**
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 1
+
+   * - Variable
+     - Description
+   * - ``datetimeFormat``
+     - The format in which the date-time values should be rendered.
+   * - ``date``
+     - The format in which the date values should be rendered.
+   * - ``faviconPath``
+     - The location of the favicon, to be modified to match your own.
+   * - ``brandImageSrc``
+     - The location of your organization's logo.
+   * - ``brandImageClass``
+     - CSS classes to apply to the logo.
+   * - ``brandTextEnabled``
+     - Logical to show/hide a text aside of the logo.
+   * - ``brandTextClass``
+     - CSS classes to apply to the text aside of the logo.
+   * - ``adminLTEPath``
+     - The location of the `AdminLTE <https://adminlte.io/>`_ theme if this one has been modified (see the **Theme** section in this documentation).
+
+**Home page settings**
+
+.. list-table::
+  :widths: 10 90
+  :header-rows: 1
+
+  * - Variable
+    - Description
+  * - ``portalLink``
+    - The link applied to the logo. Default is the data portal (as specified in the Administration > General section), but it could also be the organization's main portal.
+
+**User Profile page settings**
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 1
+
+   * - Variable
+     - Description
+   * - ``showProfileRole``
+     - Logical to show/hide the role to which the user belongs.
+   * - ``showProfileGroups``
+     - Logical to show/hide the groups to which the user belongs.
+   * - ``showProfileApplications``
+     - Logical to show/hide the applications in which the user can sign.
+
 
 Adding Pages
 ~~~~~~~~~~~~
