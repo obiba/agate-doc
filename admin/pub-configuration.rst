@@ -250,10 +250,10 @@ Translations
 
 The translations are performed in the following order, for a given ``locale``:
 
-1. check for the message key in the message_<locale>.properties (at different locations)
+1. check for the message key in the messages_<locale>.properties (at different locations)
 2. check for the message key in the <locale> JSON object as defined the **Administration > Translations** section of the administration interface
 
-For the message_* properties, the translations can be added/overridden as follows:
+For the messages_* properties, the translations can be added/overridden as follows:
 
 .. code-block:: bash
 
@@ -261,9 +261,9 @@ For the message_* properties, the translations can be added/overridden as follow
   └── conf
       └── translations
           ├── notifications
-          │   ├── message_fr.properties
-          │   └── message_en.properties
-          ├── message_fr.properties
-          └── message_en.properties
+          │   ├── messages_fr.properties
+          │   └── messages_en.properties
+          ├── messages_fr.properties
+          └── messages_en.properties
 
-Note that the notification emails translations are located at a different place than the ones for the public pages. Note also that you can declare only the message_* properties files that are relevant (language and public pages vs. notification emails) and the content of these files can contain only the translation keys that you want to override.
+Note that the notification emails translations are located at a different place than the ones for the public pages. Note also that you can declare only the messages_* properties files that are relevant (language and public pages vs. notification emails) and the content of these files can contain only the translation keys that you want to override.
