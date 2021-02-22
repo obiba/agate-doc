@@ -65,7 +65,7 @@ The id_token represents the following structure (when using scope=openid email p
       "email_verified": false,
       "iat": 1459973758,
       "exp": 1467749758,
-      "aud": "drupal"
+      "aud": "someapp"
   }
   .
   [signature]

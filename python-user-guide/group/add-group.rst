@@ -48,4 +48,4 @@ Add a new group.
 
 .. code-block:: bash
 
-  agate add-group -ag http://localhost:8081 -u administrator -p password --name researchers --applications mica drupal
+  agate add-group -ag http://localhost:8081 -u administrator -p password --name researchers --applications mica

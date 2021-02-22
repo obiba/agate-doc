@@ -51,12 +51,11 @@ Architecture, Servers and Clients
 
 The architecture of Mica is split in several servers:
 
-* Mica server: holds the domain and controls what is to be published,
+* Mica server: holds the domain and controls what is to be published, provides the web portal front-end and uses Agate as its user directory.
 * Opal server: holds the data with their dictionary and provide statistics services,
 * Agate server: user directory for data access requests management.
-* Drupal server: the web portal front-end using Mica server as its source of published documents and Agate server as its user directory.
 
-Mica, Opal and Agate are applications developed by OBiba. OBiBa also provides extensions for the Drupal application. Each of these OBiBa servers expose web services to allow easy interconnection. The Mica web portal is the final application which leverages each server specific domain and functionalities in one.
+Mica, Opal and Agate are applications developed by OBiba. Each of these OBiBa servers expose web services to allow easy interconnection. The Mica web portal is the final application which leverages each server specific domain and functionalities in one.
 
 The following diagram shows how these servers are linked together:
 
@@ -99,10 +98,3 @@ Opal offers well established security controls, allowing to NOT expose individua
 Installation and configuration guides can be found in the Opal Server Administrator Guide.
 
 Mica expects at least one Opal server when some datasets are defined. Additional Opal servers can also be identified to access to distributed datasets.
-
-Drupal Server
-~~~~~~~~~~~~~
-
-Drupal is a content management system, i.e. an application allowing to build fully customizable web portals. Drupal can be extended by modules and themes: Mica and Agate modules have been developed to access to the services of these servers. Drupal server is therefore a client of Mica and Agate servers.
-
-Installation and configuration guides about Drupal as a Mica client can be found in the Mica Drupal Client User Guide documentation.

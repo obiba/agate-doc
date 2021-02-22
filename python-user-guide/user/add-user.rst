@@ -55,7 +55,7 @@ Add a new user.
 
 .. code-block:: bash
 
-  agate add-user -ag http://localhost:8081 -u administrator -p password --name user1 --email user1@example.org --upassword CHANGEME --applications mica drupal
+  agate add-user -ag http://localhost:8081 -u administrator -p password --name user1 --email user1@example.org --upassword CHANGEME --applications mica
 
 Add a new user from a Keycloak's server that is registered as as an OpenID Connect realm.
 
