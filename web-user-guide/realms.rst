@@ -9,6 +9,19 @@ Agate is able to delegate authentication to alternate identity provider systems.
 Realm Types
 -----------
 
+Open ID Connect Realm
+~~~~~~~~~~~~~~~~~~~~~
+
+A realm that uses the OpenID Connect (`OIDC <https://openid.net/connect/>`_) protocol to authenticate users.
+:doc:`../oauth2-api/openid-connect-flow` explains the typical authentication flow when using this type of realm.
+
+To register Agate as a client of the OIDC provider it will be necessary to provide its callback URL which is: ``https://agate.example.org/auth/callback/``.
+
+.. note::
+  For Agate to authenticate for an :ref:`domain-application`, its redirect URI must be set.
+
+An example of well known open source ID provider that can be declared as an OIDC realm is `Keycloak <https://www.keycloak.org/>`_. Keycloak has also a strong user federation feature, which we recommend to use instead of using the following other realm types (LDAP etc.).
+
 LDAP Realm
 ~~~~~~~~~~
 
@@ -33,13 +46,3 @@ Salt styles include:
 - ``CRYPT``: uses the database's underlying cryptographic method to decrypt the password.
 - ``COLUMN``: the salt column must be the second column included in the query.
 - ``EXTERNAL``: uses the specified algorithm to decrypt the password.
-
-
-Open ID Connect Realm
-~~~~~~~~~~~~~~~~~~~~~
-
-A realm that uses the OpenID Connect (`OIDC <https://openid.net/connect/>`_) protocol to authenticate users.
-:doc:`../oauth2-api/openid-connect-flow` explains the typical authentication flow when using this type of realm.
-
-.. note::
-  For agate to authenticate for an :ref:`domain-application`, its redirect URI must be set.
