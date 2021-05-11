@@ -12,7 +12,7 @@ Agate server is a web application and as such, you need to specify on which port
 Property                  Description
 ========================= ==================
 ``server.port``           HTTP port number. Generally speaking this port should not be exposed to the web. Use the https port instead.
-``server.host``           Web server host name.
+``server.address``        Web server host name.
 ``server.context-path``   The URL's context path, starting with a `/`. For instance when setting `/auth`, the base URL will be `https://example.org/auth`.
 ``https.port``            HTTPS port number.
 ========================= ==================
@@ -68,6 +68,21 @@ Here is the required configuration snippet in **/etc/agate/application.yml** for
 .. note::
 
   Agate requires either **clusterMonitor** or **readAnyDatabase** role on the *admin* database for validation operations. The first role is useful for a cluster setup and the latter if your MongoDB is on a single server.
+
+
+
+reCAPTCHA Configuration
+----------------------------
+
+Agate uses `reCAPTCHA service <https://developers.google.com/recaptcha>`_ to protect the sign-up page from spam and abuse. See `reCAPTCHA Guide <https://developers.google.com/recaptcha/intro>`_ to create a key pair. Note that only reCAPTCHA version 2 is supported.
+
+=========================== ===========================
+Property                    Description
+=========================== ===========================
+``recaptcha.verifyUrl``     External service that verifies the reCAPTCHA key pair. Default is ``https://www.google.com/recaptcha/api/siteverify``.
+``recaptcha.secret``        reCAPTCHA secret key, used to authorize the communication between Agate and the reCAPTCHA server.
+``client.reCaptchaKey``     reCAPTCHA site key, used to invoke reCAPTCHA service on the application's site.
+=========================== ===========================
 
 User Directories
 ----------------
