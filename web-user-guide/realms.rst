@@ -22,6 +22,24 @@ To register Agate as a client of the OIDC provider it will be necessary to provi
 
 An example of well known open source ID provider that can be declared as an OIDC realm is `Keycloak <https://www.keycloak.org/>`_. Keycloak has also a strong user federation feature, which we recommend to use instead of using the following other realm types (LDAP etc.).
 
+There following fields are required:
+
+* An ID provider must be identified by a *Name*,
+* The Agate application has been registered in the this provider: these are the *Client ID* and *Client Secret* fields.
+* The *Discovery URI* must follow the `OpenID Connect configuration discovery specifications <https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig>`_.
+
+The optional fields are:
+
+* *Title* is a human-readable name that will be displayed in the provider's signin button in the login page. If missing, the name of the ID provider will be used.
+* *Groups* are the group that are to be automatically applied to any users signing in through this ID provider.
+* *Account Login* address allows the user to go to it's personal profile page in the ID provider interface (to chenge its password for instance) from the Opal login page.
+* *Scope* is the scope value(s) to be sent to the ID provider to initiate the OpenID Connect dialog. This is provider dependent but usually ``openid`` is enough.
+* *User Information Mapping* specify which field values of the `UserInfo <https://openid.net/specs/openid-connect-core-1_0.html#UserInfo>`_ object will be applied to the new Agate user.
+* *Groups by Claim* is an optional field name in the `UserInfo <https://openid.net/specs/openid-connect-core-1_0.html#UserInfo>`_ object (that is returned by the ID provider) that contains the group names to which the user belongs. These will be automatically applied to the user's profile. Such field is `not one of the standard claims <https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims>`_ and needs to be explicitly set. The expected value type associated to this claim is either an array of strings, or a string which group names are separated by spaces (or commas).
+* *Groups by JS* is an optional Javascript code chunk that will process the `UserInfo <https://openid.net/specs/openid-connect-core-1_0.html#UserInfo>`_ object to extract a group name or an array of group names to which the Agate user will belong.
+
+Note that the groups mapping (by claim or JS) is executed at each sign in. Then if the user was associated to a new group in the OIDC provider, this group will be automatically applied to the corresponding Agate's user as well. If the group does not exist yet, it will be created (without associated application). Removing an OIDC user from a group does not remove the Agate user from the group with same name.
+
 LDAP Realm
 ~~~~~~~~~~
 
