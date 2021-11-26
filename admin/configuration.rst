@@ -214,3 +214,16 @@ For performance, you can also activate Apache's compression module (mod_deflate)
         AddOutputFilterByType DEFLATE application/json
     </IfModule>
   </IfModule>
+  
+Recommended security headers are (to be added to the ``apache2.conf`` file, requires ``headers`` module):
+
+.. code-block:: text
+
+  # Security Headers, see https://securityheaders.com/
+  Header set Strict-Transport-Security "max-age=63072000"
+  Header set X-Frame-Options DENY
+  Header set X-XSS-Protection 1;mode=block
+  Header set X-Content-Type-Options nosniff
+  Header set Content-Security-Policy "frame-ancestors 'none'"
+  Header set Referrer-Policy "same-origin"
+  Header set Permissions-Policy "fullscreen=(self)"
