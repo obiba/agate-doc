@@ -214,7 +214,7 @@ For performance, you can also activate Apache's compression module (mod_deflate)
         AddOutputFilterByType DEFLATE application/json
     </IfModule>
   </IfModule>
-  
+
 Recommended security headers are (to be added to the ``apache2.conf`` file, requires ``headers`` module):
 
 .. code-block:: text
@@ -227,3 +227,4 @@ Recommended security headers are (to be added to the ``apache2.conf`` file, requ
   Header set Content-Security-Policy "frame-ancestors 'none'"
   Header set Referrer-Policy "same-origin"
   Header set Permissions-Policy "fullscreen=(self)"
+  Header onsuccess edit Set-Cookie ^(.+)$ "$1;HttpOnly;Secure;SameSite=Strict"
