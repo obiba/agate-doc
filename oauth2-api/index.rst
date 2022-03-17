@@ -1,3 +1,5 @@
+.. _oauth:
+
 OAuth2 Introduction
 ===================
 

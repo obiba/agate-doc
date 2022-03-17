@@ -1,7 +1,11 @@
+.. _applications_management:
+
 Applications Management
 =======================
 
-An application is an external system that can use agate as a central authentication system. Once an application is registered in agate, it can use its credentials (name and key) to connect with agate. See also :ref:`domain-application` domain documentation.
+An application is an external system that can use Agate as a central authentication system. Once an application is registered in agate, it can use its credentials (name and key) to connect with agate. See also :ref:`domain-application` domain documentation.
+
+When Agate delegates the authentication to an external :ref:`oidc_realm` or when using OAuth2 service (see :ref:`oauth`), the redirect URI must be set so that Agate performs the redirect to a known application after successful authentication. Wildcard ``*`` can be used in this configured redirect URI.
 
 The application pages are: the list of applications page and application view and edit pages.
 

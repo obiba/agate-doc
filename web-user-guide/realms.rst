@@ -9,6 +9,8 @@ Agate is able to delegate authentication to alternate identity provider systems.
 Realm Types
 -----------
 
+.. _oidc_realm:
+
 Open ID Connect Realm
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -18,7 +20,7 @@ A realm that uses the OpenID Connect (`OIDC <https://openid.net/connect/>`_) pro
 To register Agate as a client of the OIDC provider it will be necessary to provide its callback URL which is: ``https://agate.example.org/auth/callback/``.
 
 .. note::
-  For Agate to authenticate for an :ref:`domain-application`, its redirect URI must be set.
+  For Agate to authenticate for an :ref:`domain-application`, the redirect URI of the Application must be set (see :ref:`applications_management`).
 
 An example of well known open source ID provider that can be declared as an OIDC realm is `Keycloak <https://www.keycloak.org/>`_. Keycloak has also a strong user federation feature, which we recommend to use instead of using the following other realm types (LDAP etc.).
 
