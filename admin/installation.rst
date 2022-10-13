@@ -87,7 +87,6 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
       agate:
           image: obiba/agate
           ports:
-                  - "8844:8444"
                   - "8881:8081"
           links:
                   - mongo
@@ -100,7 +99,7 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
           volumes:
                   - /tmp/agate:/srv
       mongo:
-          image: mongo:4.2
+          image: mongo
 
 Then environment variables that are exposed by this image are:
 
