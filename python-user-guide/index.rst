@@ -18,7 +18,7 @@ The Agate Python Client is available on the official `Python Package Index <http
   sudo pip install obiba-agate
 
 .. note::
-  Previous versions were available as system packages. Make sure to remove them before installing the package with `pip`.
+  Previous versions were available as system packages. Make sure to remove them before installing the package with ``pip``.
 
   .. code-block:: bash
 
