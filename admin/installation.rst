@@ -24,7 +24,7 @@ Server Software Requirements
 Software Suggested version Download link                                                                                        Usage
 ======== ================= ==================================================================================================== ========================
 Java     8                 `OpenJDK 8 downloads <http://openjdk.java.net/projects/jdk8/>`_                                      Java runtime environment
-MongoDB  <= 4.2.x          `MongoDB Community downloads <https://www.mongodb.com/docs/v4.2/administration/install-community/>`_ Database engine
+MongoDB  <= 6.0.x          `MongoDB Community downloads <https://www.mongodb.com/docs/v4.2/administration/install-community/>`_ Database engine
 ======== ================= ==================================================================================================== ========================
 
 While Java is required by Agate server application, MongoDB can be installed on another server.
