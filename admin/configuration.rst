@@ -69,10 +69,8 @@ Here is the required configuration snippet in **/etc/agate/application.yml** for
 
   Agate requires either **clusterMonitor** or **readAnyDatabase** role on the *admin* database for validation operations. The first role is useful for a cluster setup and the latter if your MongoDB is on a single server.
 
-
-
 reCAPTCHA Configuration
-----------------------------
+-----------------------
 
 Agate uses `reCAPTCHA service <https://developers.google.com/recaptcha>`_ to protect the sign-up page from spam and abuse. See `reCAPTCHA Guide <https://developers.google.com/recaptcha/intro>`_ to create a key pair. Note that only reCAPTCHA version 2 is supported.
 
@@ -83,6 +81,17 @@ Property                    Description
 ``recaptcha.secret``        reCAPTCHA secret key, used to authorize the communication between Agate and the reCAPTCHA server.
 ``client.reCaptchaKey``     reCAPTCHA site key, used to invoke reCAPTCHA service on the application's site.
 =========================== ===========================
+
+Cross Site Resource Forgery (CSRF)
+----------------------------------
+
+`CSRF <https://owasp.org/www-community/attacks/csrf>`_ attacks can be mitigated by a built-in interceptor. Default behavior allows connections (http or https) from ``localhost`` and ``127.0.0.1``. Requests from pages served by Opal should be allowed as well (https only), unless network settings or proxies modify or do not report the referer URL.
+
+======================================= =========================================================================
+Property                                Description
+======================================= =========================================================================
+``csrf.allowed``                        Comma separated list of client ``host:port`` explicitly allowed to connect to Opal server. Use ``*`` as a wildcard. Default is empty.
+======================================= =========================================================================
 
 User Directories
 ----------------
