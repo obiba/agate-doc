@@ -14,6 +14,7 @@ Property                                   Description
 Name	                                     The name of the organization using this instance of Agate server. It will be used when sending notification emails.
 Public URL                                 Public base URL of the server. It will be used when sending notification emails and in the OAuth2 settings.
 Portal URL                                 The organization main portal, to go back to the main site form the Agate's public pages.
+Domain                                     The session cookie domain, required for single sign-on to operate.
 Short term timeout                         Ticket expiration timeout in hours.
 Long term timeout                          Ticket expiration timeout in hours when "remember me" option is selected.
 Inactive timeout                           User account expiration timeout in days.
