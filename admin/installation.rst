@@ -20,12 +20,12 @@ Memory (RAM) Minimum: 4GB, Recommended: >4GB
 Server Software Requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-======== ================= ==================================================================================================== ========================
-Software Required version  Download link                                                                                        Usage
-======== ================= ==================================================================================================== ========================
-Java     21                `OpenJDK downloads <https://jdk.java.net/>`_                                                         Java runtime environment
-MongoDB  <= 6.0.x          `MongoDB Community downloads <https://www.mongodb.com/docs/v4.2/administration/install-community/>`_ Database engine
-======== ================= ==================================================================================================== ========================
+======== ================= =========================================================== ========================
+Software Version           Download link                                               Usage
+======== ================= =========================================================== ========================
+Java     21                `OpenJDK downloads <https://jdk.java.net/>`_                Java runtime environment
+MongoDB  <= 6.1.x          `MongoDB downloads <https://www.mongodb.com/docs/v6.0/>`_   Database engine
+======== ================= =========================================================== ========================
 
 While Java is required by Agate server application, MongoDB can be installed on another server.
 
