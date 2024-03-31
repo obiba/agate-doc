@@ -21,9 +21,9 @@ Server Software Requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ======== ================= ==================================================================================================== ========================
-Software Suggested version Download link                                                                                        Usage
+Software Required version  Download link                                                                                        Usage
 ======== ================= ==================================================================================================== ========================
-Java     8                 `OpenJDK 8 downloads <http://openjdk.java.net/projects/jdk8/>`_                                      Java runtime environment
+Java     21                `OpenJDK downloads <https://jdk.java.net/>`_                                                         Java runtime environment
 MongoDB  <= 6.0.x          `MongoDB Community downloads <https://www.mongodb.com/docs/v4.2/administration/install-community/>`_ Database engine
 ======== ================= ==================================================================================================== ========================
 
