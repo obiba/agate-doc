@@ -111,6 +111,8 @@ Environment Variable              Description
 ``MONGO_HOST``                    MongoDB server host (optional).
 ``MONGO_PORT``                    MongoDB server port, default is ``27017``.
 ``MONGO_DB``                      MongoDB database name, default is ``agate``.
+``MONGO_USER``                    MongoDB user name (optional).
+``MONGO_PASSWORD``                MongoDB user password (optional).
 ``RECAPTCHA_SITE_KEY``            `reCAPTCHA v2 <https://developers.google.com/recaptcha>`_ site key
 ``RECAPTCHA_SECRET_KEY``          `reCAPTCHA v2 <https://developers.google.com/recaptcha>`_ secret key
 ================================= =========================================================================
