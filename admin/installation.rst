@@ -113,6 +113,7 @@ Environment Variable              Description
 ``MONGO_DB``                      MongoDB database name, default is ``agate``.
 ``MONGO_USER``                    MongoDB user name (optional).
 ``MONGO_PASSWORD``                MongoDB user password (optional).
+``MONGODB_URI``                   Replaces the above MongoDB variables, represents the MongoDB URI without the `mongodb://` prefix.
 ``RECAPTCHA_SITE_KEY``            `reCAPTCHA v2 <https://developers.google.com/recaptcha>`_ site key
 ``RECAPTCHA_SECRET_KEY``          `reCAPTCHA v2 <https://developers.google.com/recaptcha>`_ secret key
 ================================= =========================================================================
