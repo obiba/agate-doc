@@ -69,6 +69,20 @@ Here is the required configuration snippet in **/etc/agate/application.yml** for
 
   Agate requires either **clusterMonitor** or **readAnyDatabase** role on the *admin* database for validation operations. The first role is useful for a cluster setup and the latter if your MongoDB is on a single server.
 
+Login Configuration
+-------------------
+
+The login configuration is used to protect the login page from brute force attacks.
+
+======================================= =========================================================================
+Property                                Description
+======================================= =========================================================================
+``login.maxTry``                        The number of login attempts before the user is banned. Default is 3 times.
+``login.trialTime``                     The time window in seconds during which the user can try to log in. Default is 300 seconds (5 minutes).
+``login.banTime``                       The time in seconds the user is banned after the maximum number of login attempts. Default is 300 seconds (5 minutes).
+``login.otpTimeout``                    The time in seconds the user has to enter the OTP (One Time Password) sent by email to finalize the login. Default is 600 seconds (10 minutes).
+======================================= =========================================================================
+
 reCAPTCHA Configuration
 -----------------------
 
