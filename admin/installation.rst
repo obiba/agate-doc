@@ -82,7 +82,6 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
 
 .. code-block:: yaml
 
-  version: '3'
   services:
       agate:
           image: obiba/agate
