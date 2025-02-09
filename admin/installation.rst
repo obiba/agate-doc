@@ -87,7 +87,7 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
           image: obiba/agate
           ports:
                   - "8881:8081"
-          links:
+          depends_on:
                   - mongo
           environment:
                   - AGATE_ADMINISTRATOR_PASSWORD=password
