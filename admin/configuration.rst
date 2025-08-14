@@ -88,12 +88,14 @@ reCAPTCHA Configuration
 
 Agate uses `reCAPTCHA service <https://developers.google.com/recaptcha>`_ to protect the sign-up page from spam and abuse. See `reCAPTCHA Guide <https://developers.google.com/recaptcha/intro>`_ to create a key pair. Note that only reCAPTCHA version 2 is supported.
 
+Unset these properties to disable reCAPTCHA.
+
 =========================== ===========================
 Property                    Description
 =========================== ===========================
-``recaptcha.verifyUrl``     External service that verifies the reCAPTCHA key pair. Default is ``https://www.google.com/recaptcha/api/siteverify``.
-``recaptcha.secret``        reCAPTCHA secret key, used to authorize the communication between Agate and the reCAPTCHA server.
-``client.reCaptchaKey``     reCAPTCHA site key, used to invoke reCAPTCHA service on the application's site.
+``recaptcha.verifyUrl``     External service that verifies the reCAPTCHA key pair. Default is ``https://www.google.com/recaptcha/api/siteverify``. No verification is done if this key is not set.
+``recaptcha.secret``        reCAPTCHA secret key, used to authorize the communication between Agate and the reCAPTCHA server. No verification is done if this key is not set.
+``client.reCaptchaKey``     reCAPTCHA site key, used to invoke reCAPTCHA service on the application's site. No widget is displayed if this key is not set.
 =========================== ===========================
 
 Cross Site Resource Forgery (CSRF)
