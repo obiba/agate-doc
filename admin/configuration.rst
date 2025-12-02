@@ -174,28 +174,35 @@ Mail Configuration
 
 Agate requires mail server configuration to send notification emails (user registration, password reset, OTP codes, etc.). Two authentication methods are supported: SMTP and OAuth2.
 
-The ``mail.auth-type`` property determines which authentication method to use: ``smtp`` (default) or ``oauth2``. The ``mail.from`` property (email address used as sender) is required for both methods.
+The following properties are common to both authentication methods and are configured in **AGATE_HOME/conf/application-prod.yml**:
+
+======================= ==========================================
+Property                Description
+======================= ==========================================
+``mail.auth-type``      Authentication type: ``smtp`` (default)
+                        or ``oauth2``.
+``mail.from``           Email address used as sender.
+======================= ==========================================
+
+Configuration options vary depending on the authentication method. See the specific sections below for detailed properties and examples for each authentication type.
 
 **SMTP Configuration**
 
-Standard SMTP authentication uses username and password credentials. The following properties are available in **AGATE_HOME/conf/application-prod.yml**:
+Standard SMTP authentication uses username and password credentials. The following SMTP-specific properties are available:
 
-======================= ========================================== ===============
-Property                Description                                Applies to
-======================= ========================================== ===============
-``mail.auth-type``      Authentication type: ``smtp`` (default)    Both
-                        or ``oauth2``.
-``mail.host``           Mail server host name.                     SMTP only
-``mail.port``           Mail server port number.                   SMTP only
-``mail.user``           User name for authentication.              SMTP only
-``mail.password``       User password for authentication.          SMTP only
-``mail.protocol``       Mail protocol, default is ``smtp``.        SMTP only
-``mail.tls``            Enable TLS encryption. Default is          SMTP only
+======================= ==========================================
+Property                Description
+======================= ==========================================
+``mail.host``           Mail server host name.
+``mail.port``           Mail server port number.
+``mail.user``           User name for authentication.
+``mail.password``       User password for authentication.
+``mail.protocol``       Mail protocol, default is ``smtp``.
+``mail.tls``            Enable TLS encryption. Default is
                         ``false``.
-``mail.auth``           Enable authentication. Default is          SMTP only
+``mail.auth``           Enable authentication. Default is
                         ``false``.
-``mail.from``           Email address used as sender.              Both
-======================= ========================================== ===============
+======================= ==========================================
 
 Example SMTP configuration:
 
@@ -220,7 +227,7 @@ OAuth2 authentication is supported for Microsoft 365, Gmail, and other OAuth2-co
 
   Microsoft is `retiring Basic Authentication for SMTP in Exchange Online <https://techcommunity.microsoft.com/blog/exchange/exchange-online-to-retire-basic-auth-for-client-submission-smtp-auth/4114750>`_, making OAuth2 the recommended authentication method for Microsoft 365.
 
-When using OAuth2 authentication (``mail.auth-type: oauth2``), only the ``mail.from`` property from the SMTP properties table is required. The SMTP server connection properties (host, port, protocol, tls, auth, user, password) are not used with OAuth2.
+When using OAuth2 authentication (``mail.auth-type: oauth2``), only the common properties are required (``mail.auth-type`` and ``mail.from``). The SMTP server connection properties (host, port, protocol, tls, auth, user, password) are not used with OAuth2.
 
 OAuth2-specific properties:
 
