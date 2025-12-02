@@ -100,3 +100,11 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# VS Code
+.history
+
+# AI agents
+.claude
+.serena
+
