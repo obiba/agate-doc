@@ -81,6 +81,8 @@ Property                                Description
 ``login.trialTime``                     The time window in seconds during which the user can try to log in. Default is 300 seconds (5 minutes).
 ``login.banTime``                       The time in seconds the user is banned after the maximum number of login attempts. Default is 300 seconds (5 minutes).
 ``login.otpTimeout``                    The time in seconds the user has to enter the OTP (One Time Password) sent by email to finalize the login. Default is 600 seconds (10 minutes).
+``login.re-auth.timeout``               The time in seconds after which the user must re-authenticate to access sensitive operations. Default is 300 seconds (5 minutes).
+``login.re-auth.endpoints``             List of sensitive endpoints that require re-authentication. Default are users creation and user update.
 ======================================= =========================================================================
 
 reCAPTCHA Configuration
