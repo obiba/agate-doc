@@ -174,23 +174,30 @@ Mail Configuration
 
 Agate requires mail server configuration to send notification emails (user registration, password reset, OTP codes, etc.). Two authentication methods are supported: SMTP and OAuth2.
 
-======================= ==========================================
-Property                Description
-======================= ==========================================
-``mail.auth-type``      Authentication type: ``smtp`` (default) or ``oauth2``.
-``mail.host``           Mail server host name.
-``mail.port``           Mail server port number.
-``mail.user``           User name for authentication.
-``mail.password``       User password for authentication.
-``mail.protocol``       Mail protocol, default is ``smtp``.
-``mail.tls``            Enable TLS encryption. Default is ``false``.
-``mail.auth``           Enable authentication. Default is ``false``.
-``mail.from``           Email address used as sender.
-======================= ==========================================
+The ``mail.auth-type`` property determines which authentication method to use: ``smtp`` (default) or ``oauth2``. The ``mail.from`` property (email address used as sender) is required for both methods.
 
 **SMTP Configuration**
 
-Standard SMTP configuration in **AGATE_HOME/conf/application-prod.yml**:
+Standard SMTP authentication uses username and password credentials. The following properties are available in **AGATE_HOME/conf/application-prod.yml**:
+
+======================= ========================================== ===============
+Property                Description                                Applies to
+======================= ========================================== ===============
+``mail.auth-type``      Authentication type: ``smtp`` (default)    Both
+                        or ``oauth2``.
+``mail.host``           Mail server host name.                     SMTP only
+``mail.port``           Mail server port number.                   SMTP only
+``mail.user``           User name for authentication.              SMTP only
+``mail.password``       User password for authentication.          SMTP only
+``mail.protocol``       Mail protocol, default is ``smtp``.        SMTP only
+``mail.tls``            Enable TLS encryption. Default is          SMTP only
+                        ``false``.
+``mail.auth``           Enable authentication. Default is          SMTP only
+                        ``false``.
+``mail.from``           Email address used as sender.              Both
+======================= ========================================== ===============
+
+Example SMTP configuration:
 
 .. code-block:: yaml
 
@@ -199,7 +206,7 @@ Standard SMTP configuration in **AGATE_HOME/conf/application-prod.yml**:
     host: smtp.example.org
     port: 587
     user: agate@example.org
-    password: password
+    password: your-smtp-password
     protocol: smtp
     tls: true
     auth: true
@@ -213,7 +220,9 @@ OAuth2 authentication is supported for Microsoft 365, Gmail, and other OAuth2-co
 
   Microsoft is `retiring Basic Authentication for SMTP in Exchange Online <https://techcommunity.microsoft.com/blog/exchange/exchange-online-to-retire-basic-auth-for-client-submission-smtp-auth/4114750>`_, making OAuth2 the recommended authentication method for Microsoft 365.
 
-Additional properties for OAuth2:
+When using OAuth2 authentication (``mail.auth-type: oauth2``), only the ``mail.from`` property from the SMTP properties table is required. The SMTP server connection properties (host, port, protocol, tls, auth, user, password) are not used with OAuth2.
+
+OAuth2-specific properties:
 
 ================================= ==========================================
 Property                          Description
