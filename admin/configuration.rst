@@ -169,6 +169,96 @@ Passwords must be encrypted using shiro-hasher tools (included in Agate tools di
   cd /usr/share/agate/tools
   ./shiro-hasher -p
 
+Mail Configuration
+------------------
+
+Agate requires mail server configuration to send notification emails (user registration, password reset, OTP codes, etc.). Two authentication methods are supported: SMTP and OAuth2.
+
+The following properties are common to both authentication methods and are configured in **AGATE_HOME/conf/application-prod.yml**:
+
+======================= ==========================================
+Property                Description
+======================= ==========================================
+``mail.auth-type``      Authentication type: ``smtp`` (default)
+                        or ``oauth2``.
+``mail.from``           Email address used as sender.
+======================= ==========================================
+
+Configuration options vary depending on the authentication method. See the specific sections below for detailed properties and examples for each authentication type.
+
+**SMTP Configuration**
+
+Standard SMTP authentication uses username and password credentials. The following SMTP-specific properties are available:
+
+======================= ==========================================
+Property                Description
+======================= ==========================================
+``mail.host``           Mail server host name.
+``mail.port``           Mail server port number.
+``mail.user``           User name for authentication.
+``mail.password``       User password for authentication.
+``mail.protocol``       Mail protocol, default is ``smtp``.
+``mail.tls``            Enable TLS encryption. Default is
+                        ``false``.
+``mail.auth``           Enable authentication. Default is
+                        ``false``.
+======================= ==========================================
+
+Example SMTP configuration:
+
+.. code-block:: yaml
+
+  mail:
+    auth-type: smtp
+    host: smtp.example.org
+    port: 587
+    user: agate@example.org
+    password: your-smtp-password
+    protocol: smtp
+    tls: true
+    auth: true
+    from: agate@example.org
+
+**OAuth2 Configuration**
+
+OAuth2 authentication is supported for Microsoft 365, Gmail, and other OAuth2-compatible providers. This method uses token-based authentication with automatic token refresh.
+
+.. note::
+
+  Microsoft is `retiring Basic Authentication for SMTP in Exchange Online <https://techcommunity.microsoft.com/blog/exchange/exchange-online-to-retire-basic-auth-for-client-submission-smtp-auth/4114750>`_, making OAuth2 the recommended authentication method for Microsoft 365.
+
+When using OAuth2 authentication (``mail.auth-type: oauth2``), only the common properties are required (``mail.auth-type`` and ``mail.from``). The SMTP server connection properties (host, port, protocol, tls, auth, user, password) are not used with OAuth2.
+
+OAuth2-specific properties:
+
+================================= ==========================================
+Property                          Description
+================================= ==========================================
+``mail.oauth2.user``              Email address that will send emails.
+``mail.oauth2.client-id``         OAuth2 application client ID.
+``mail.oauth2.client-secret``     OAuth2 application client secret.
+``mail.oauth2.tenant-id``         Tenant/directory ID (provider-specific).
+``mail.oauth2.refresh-token``     OAuth2 refresh token.
+``mail.oauth2.token-uri``         Token endpoint URL.
+``mail.oauth2.scope``             Required OAuth2 scope.
+================================= ==========================================
+
+OAuth2 configuration example in **AGATE_HOME/conf/application-prod.yml**:
+
+.. code-block:: yaml
+
+  mail:
+    auth-type: oauth2
+    from: agate@example.org
+    oauth2:
+      user: agate@example.org
+      client-id: your-client-id
+      client-secret: your-client-secret
+      tenant-id: your-tenant-id
+      refresh-token: your-refresh-token
+      token-uri: https://login.microsoftonline.com/your-tenant-id/oauth2/v2.0/token
+      scope: https://outlook.office365.com/SMTP.Send
+
 Notification Emails
 -------------------
 
