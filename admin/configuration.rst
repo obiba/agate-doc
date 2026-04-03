@@ -152,8 +152,8 @@ Although it is possible to register some additional user directories, this pract
   #     cd <AGATE_DIST_HOME>/tools && shiro-hasher.bat -p
   #
   # Format is:
-  # username=password[,role]*
-  administrator = $shiro1$SHA-256$500000$dxucP0IgyO99rdL0Ltj1Qg==$qssS60kTC7TqE61/JFrX/OEk0jsZbYXjiGhR7/t+XNY=,agate-administrator
+  # username="password-hash"[,role]*
+  administrator = "$shiro2$argon2id$v=19$t=1,m=65536,p=4$2ikVjnBLc7hjLWh1+Za/Uw$hgaMknQwQOcEy2kYYOgKLloSRo2VvHbYbxASNu69wuk",agate-administrator
 
   [roles]
   # The 'roles' section is for simple deployments
