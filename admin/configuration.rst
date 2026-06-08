@@ -257,7 +257,11 @@ OAuth2 configuration example in **AGATE_HOME/conf/application-prod.yml**:
       tenant-id: your-tenant-id
       refresh-token: your-refresh-token
       token-uri: https://login.microsoftonline.com/your-tenant-id/oauth2/v2.0/token
-      scope: https://outlook.office365.com/SMTP.Send
+      scope: https://outlook.office365.com/SMTP.Send offline_access
+
+.. note ::
+
+  The ``offline_access`` scope is required alongside the SMTP scope to ensure Microsoft returns a new refresh token on each access token refresh cycle, preventing the refresh token from expiring after 90 days of inactivity.
 
 Notification Emails
 -------------------
