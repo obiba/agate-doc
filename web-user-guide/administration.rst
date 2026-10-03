@@ -22,6 +22,10 @@ Sign up enabled                            Whether a user can self register from
 Sign up form offers to choose the username User name will be extracted from user email.
 ========================================== ==========================================
 
+.. note::
+
+  The initial values of the **Public URL** and the **Portal URL** can be provided by the ``agate.public-url`` and ``agate.portal-url`` properties (environment variables ``AGATE_PUBLIC_URL`` and ``AGATE_PORTAL_URL``). They are applied only when the corresponding setting is empty.
+
 Encryption Keys
 ---------------
 

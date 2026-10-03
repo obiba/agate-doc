@@ -96,6 +96,7 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                   - MONGO_PORT=27017
                   - RECAPTCHA_SITE_KEY=6Lfo7gYTAAAAAOyl8_MHuH-AVBzRDtpIuJrjL3Pb
                   - RECAPTCHA_SECRET_KEY=6Lfo7gYTAAAAADym-vSDvPBeBCXaxIprA0QXLk_b
+                  - AGATE_PUBLIC_URL=http://localhost:8881
                   - SPRING_MAIL_HOST=mailpit
                   - SPRING_MAIL_PORT=1025
                   - SPRING_MAIL_FROM=agate@example.org
@@ -117,6 +118,8 @@ Environment Variable              Description
 ================================= =========================================================================
 ``JAVA_OPTS``
 ``AGATE_ADMINISTRATOR_PASSWORD``  Agate administrator password, required and set at first start.
+``AGATE_PUBLIC_URL``              Public base URL of the server (optional). Applied only when not already set in the administration settings.
+``AGATE_PORTAL_URL``              Organization main portal URL (optional). Applied only when not already set in the administration settings.
 ``MONGO_HOST``                    MongoDB server host (optional).
 ``MONGO_PORT``                    MongoDB server port, default is ``27017``.
 ``MONGO_DB``                      MongoDB database name, default is ``agate``.
