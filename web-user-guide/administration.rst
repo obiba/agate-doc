@@ -1,3 +1,5 @@
+.. _administration:
+
 Administration
 ==============
 
@@ -61,3 +63,21 @@ User Attributes
 ---------------
 
 Additional user attributes can be declared. They will appear in the user form (including sign-up).
+
+Notification Templates
+----------------------
+
+The templates of the notification emails sent by Agate (email confirmation, password reset, two-factor authentication code, pending registration review/approval) can be edited. See also the Notification Emails section of the server configuration documentation.
+
+Each template is presented with its state:
+
+* **Default**, the template provided with Agate,
+* **Custom**, a template that was added,
+* **Overridden**, a custom template replacing the default one.
+
+The template editor offers:
+
+* **Edit**: the `FreeMarker <https://freemarker.apache.org/>`_ template source, with syntax highlighting. The template is validated before being saved. A localized variant of a template can be added by suffixing the template name with the language, e.g. ``confirmationEmail_fr``.
+* **Preview**: the HTML rendering of the template being edited (not necessarily saved), with the current user as the recipient and sample values, in the selected language (one of the configured languages; defaults to the template name suffix, if any). The statements using variables that are not available in this context are skipped.
+
+Removing a custom template that overrides a default one restores the default template.

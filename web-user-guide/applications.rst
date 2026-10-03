@@ -27,6 +27,25 @@ Edit an application
 
 Edits an application's properties. The name can not be changed.
 
+The **Fallback notification templates** property is the templates folder from which the notification templates missing in the application's own folder are taken (for instance the ``mica`` folder for a Mica server registered with another name). "None" means no fallback.
+
+Notification templates
+~~~~~~~~~~~~~~~~~~~~~~
+
+The application page lists the templates of the notification emails that the application can request Agate to send to its users. These templates are located in the **notifications/<application ID>** folder. Each template is presented with its state:
+
+* **Default**, the template provided with Agate,
+* **Custom**, a template that was added,
+* **Overridden**, a custom template replacing the default one,
+* **Inherited from <folder>**, a template of the fallback folder, not defined in the application's folder.
+
+The template editor offers:
+
+* **Edit**: the `FreeMarker <https://freemarker.apache.org/>`_ template source, with syntax highlighting. The template is validated before being saved. Saving an inherited template creates a copy of it in the application's folder.
+* **Preview**: the HTML rendering of the template being edited (not necessarily saved), with the current user as the recipient, in the selected language (one of the configured languages; defaults to the template name suffix, if any). The statements using variables that are provided by the application when requesting the notification are skipped.
+
+Removing a custom template restores the default or inherited one, if any. The edited templates are saved in the **AGATE_HOME/conf/templates/notifications/<application ID>** folder.
+
 Delete an application
 ~~~~~~~~~~~~~~~~~~~~~
 
