@@ -89,16 +89,26 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                   - "8881:8081"
           depends_on:
                   - mongo
+                  - mailpit
           environment:
                   - AGATE_ADMINISTRATOR_PASSWORD=password
                   - MONGO_HOST=mongo
                   - MONGO_PORT=27017
                   - RECAPTCHA_SITE_KEY=6Lfo7gYTAAAAAOyl8_MHuH-AVBzRDtpIuJrjL3Pb
                   - RECAPTCHA_SECRET_KEY=6Lfo7gYTAAAAADym-vSDvPBeBCXaxIprA0QXLk_b
+                  - SPRING_MAIL_HOST=mailpit
+                  - SPRING_MAIL_PORT=1025
+                  - SPRING_MAIL_FROM=agate@example.org
           volumes:
                   - /tmp/agate:/srv
       mongo:
           image: mongo
+      mailpit:
+          image: axllent/mailpit
+          ports:
+                  - "8025:8025"
+
+In this example, emails sent by Agate are captured by `Mailpit <https://mailpit.axllent.org/>`_ and can be read at http://localhost:8025.
 
 Then environment variables that are exposed by this image are:
 
@@ -115,7 +125,18 @@ Environment Variable              Description
 ``MONGODB_URI``                   Replaces the above MongoDB variables, represents the MongoDB URI without the `mongodb://` prefix.
 ``RECAPTCHA_SITE_KEY``            `reCAPTCHA v2 <https://developers.google.com/recaptcha>`_ site key
 ``RECAPTCHA_SECRET_KEY``          `reCAPTCHA v2 <https://developers.google.com/recaptcha>`_ secret key
+``SPRING_MAIL_AUTH_TYPE``         Mail authentication type: ``smtp`` (default) or ``oauth2``.
+``SPRING_MAIL_HOST``              SMTP server host, default is ``localhost``.
+``SPRING_MAIL_PORT``              SMTP server port, default is ``25``.
+``SPRING_MAIL_USER``              SMTP user name (optional).
+``SPRING_MAIL_PASSWORD``          SMTP user password (optional).
+``SPRING_MAIL_PROTOCOL``          SMTP protocol, default is ``smtp``.
+``SPRING_MAIL_TLS``               Whether to use STARTTLS, default is ``false``.
+``SPRING_MAIL_AUTH``              Whether SMTP authentication is required, default is ``false``.
+``SPRING_MAIL_FROM``              Email address used as sender, default is ``agate@example.org``.
 ================================= =========================================================================
+
+More generally, any ``spring.mail.*`` property of the :doc:`configuration` can be set by an environment variable, by upper-casing its name and replacing ``.`` and ``-`` with ``_``. For instance the OAuth2 property ``spring.mail.oauth2.client-id`` is set by ``SPRING_MAIL_OAUTH2_CLIENT_ID``. These environment variables take precedence over the **application-prod.yml** file and are applied at each start.
 
 Upgrade
 -------
