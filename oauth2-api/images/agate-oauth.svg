@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 380" width="460" height="380" role="img" aria-label="OAuth2 roles: resource owner, client application, resource server and Agate as authorization server">
+<style>text{font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px;fill:#0D2321}.p{font-family:Sora,"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:16px;letter-spacing:-0.02em}.w{fill:#fff}.m{fill:#4F6663;font-size:13px}.l{stroke:#4F6663;stroke-width:1.5;fill:none}</style>
+<rect width="460" height="380" fill="#fff"/>
+<g class="l"><path d="M230 60 V120"/><path d="M195 180 L110 270"/><path d="M265 180 L350 270"/><path d="M170 300 H290"/></g>
+<g transform="translate(230 42)" fill="#4F6663"><circle cx="0" cy="-14" r="9"/><path d="M-16 12 a16 14 0 0 1 32 0 z"/></g>
+<text x="256" y="34" class="m">Resource owner</text>
+<rect x="160" y="120" width="140" height="60" rx="6" fill="#fff" stroke="#9C2F63" stroke-width="1.5"/>
+<text x="230" y="146" text-anchor="middle" class="p">Client</text><text x="230" y="166" text-anchor="middle" class="p">application</text>
+<rect x="30" y="270" width="140" height="60" rx="6" fill="#fff" stroke="#9C2F63" stroke-width="1.5"/>
+<text x="100" y="296" text-anchor="middle" class="p">Resource</text><text x="100" y="316" text-anchor="middle" class="p">server</text>
+<rect x="290" y="270" width="140" height="60" rx="6" fill="#9C2F63"/>
+<text x="360" y="296" text-anchor="middle" class="p w">Authorization</text><text x="360" y="316" text-anchor="middle" class="p w">server (Agate)</text>
+<text x="142" y="222" class="m" text-anchor="end">get resource</text>
+<text x="318" y="222" class="m">authorize access</text>
+<text x="230" y="292" class="m" text-anchor="middle">validate access</text>
+</svg>
