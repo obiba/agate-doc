@@ -8,7 +8,7 @@ Users, Groups and Applications
 
 The following diagram describes the domain handled by Agate. Each entity of this domain can be edited individually in the Agate Web Application administration interface.
 
-.. image:: images/agate-domain.png
+.. image:: images/agate-domain.svg
 
 .. _domain-user:
 
@@ -44,7 +44,7 @@ Authentication Flow
 
 When a user tries to sign-in an application X, this application delegates the user authentication to Agate. If successful, a ticket is created in Agate (to track user activity) and user session local to the application X is created. This local user session allows the application to not query Agate each time user authorization check is requested.
 
-.. image:: images/agate-flow.png
+.. image:: images/agate-flow.svg
 
 Architecture, Servers and Clients
 ---------------------------------
@@ -59,7 +59,7 @@ Mica, Opal and Agate are applications developed by OBiba. Each of these OBiBa se
 
 The following diagram shows how these servers are linked together:
 
-.. image:: images/mica-architecture.png
+.. image:: images/mica-architecture.svg
 
 
 Agate Server

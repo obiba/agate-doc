@@ -17,7 +17,7 @@ The OAuth2 protocol defines several roles:
 * the **client application** is the application requesting access to the resources stored on the resource server. These resources are owned by the resource owner. A client application could be an X-ray images analyser that extracts the image data from Opal.
 * the **authorization server** is the server authorizing the client application to access the resources of the resource owner: this is the role of Agate. The authorization server and the resource server can be the same server, but it doesn't have to. When Agate is also the resource server, the resource that is accessed is the user profile.
 
-.. image:: images/agate-oauth.png
+.. image:: images/agate-oauth.svg
 
 Client ID, Client Secret and Redirect URI
 -----------------------------------------
