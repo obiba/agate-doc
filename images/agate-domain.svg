@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" width="480" height="290" role="img" aria-label="Agate domain: users belong to groups and access applications">
+<style>text{font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px;fill:#0D2321}.p{font-family:Sora,"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:16px;letter-spacing:-0.02em}.w{fill:#fff}.m{fill:#4F6663;font-size:13px}.l{stroke:#4F6663;stroke-width:1.5;fill:none}</style>
+<rect width="480" height="290" fill="#fff"/>
+<g class="l"><path d="M205 84 L110 196"/><path d="M275 84 L370 196"/><path d="M150 228 H310"/></g>
+<rect x="170" y="24" width="140" height="60" rx="6" fill="#9C2F63"/>
+<text x="240" y="59" text-anchor="middle" class="p w">User</text>
+<rect x="40" y="196" width="140" height="60" rx="6" fill="#fff" stroke="#9C2F63" stroke-width="1.5"/>
+<text x="110" y="231" text-anchor="middle" class="p">Group</text>
+<rect x="300" y="196" width="140" height="60" rx="6" fill="#fff" stroke="#9C2F63" stroke-width="1.5"/>
+<text x="370" y="231" text-anchor="middle" class="p">Application</text>
+<text x="148" y="140" class="m" text-anchor="end">0..n</text>
+<text x="332" y="140" class="m">0..n</text>
+<text x="230" y="220" class="m" text-anchor="middle">0..n</text>
+</svg>

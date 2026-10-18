@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" width="420" height="380" role="img" aria-label="Mica, Agate and Opal architecture">
+<style>text{font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px;fill:#0D2321}.p{font-family:Sora,"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:16px;letter-spacing:-0.02em}.w{fill:#fff}.m{fill:#4F6663;font-size:13px}.l{stroke:#4F6663;stroke-width:1.5;fill:none}</style>
+<rect width="420" height="380" fill="#fff"/>
+<g class="l"><path d="M196 56 L110 120"/><path d="M224 56 L310 120"/><path d="M170 150 H250"/><path d="M100 180 V280"/><path d="M290 180 L150 290"/></g>
+<g transform="translate(210 42)" fill="#4F6663"><circle cx="0" cy="-14" r="9"/><path d="M-16 12 a16 14 0 0 1 32 0 z"/></g>
+<text x="236" y="34" class="m" text-anchor="start">End user</text>
+<rect x="40" y="120" width="130" height="60" rx="6" fill="#2F5DA8"/>
+<text x="105" y="155" text-anchor="middle" class="p w">Mica</text>
+<rect x="250" y="120" width="130" height="60" rx="6" fill="#9C2F63"/>
+<text x="315" y="155" text-anchor="middle" class="p w">Agate</text>
+<rect x="40" y="280" width="130" height="60" rx="6" fill="#00615C"/>
+<text x="105" y="315" text-anchor="middle" class="p w">Opal</text>
+</svg>

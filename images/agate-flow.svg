@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="920" height="480" role="img" aria-label="Authentication flow between the user, an application and Agate">
+<style>text{font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px;fill:#0D2321}.p{font-family:Sora,"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:16px;letter-spacing:-0.02em}.w{fill:#fff}.m{fill:#4F6663;font-size:13px}.l{stroke:#4F6663;stroke-width:1.5;fill:none}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#9C2F63"/></marker>
+<marker id="s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#4F6663"/></marker></defs>
+<rect width="920" height="480" fill="#fff"/>
+<g stroke="#DBE6E4" stroke-width="2"><path d="M80 100 V450"/><path d="M380 80 V450"/><path d="M700 80 V450"/></g>
+<g transform="translate(80 56)" fill="#4F6663"><circle cx="0" cy="-14" r="9"/><path d="M-16 12 a16 14 0 0 1 32 0 z"/></g>
+<text x="80" y="92" text-anchor="middle" class="m">User</text>
+<rect x="310" y="30" width="140" height="50" rx="6" fill="#fff" stroke="#9C2F63" stroke-width="1.5"/>
+<text x="380" y="60" text-anchor="middle" class="p">Application X</text>
+<rect x="630" y="30" width="140" height="50" rx="6" fill="#9C2F63"/>
+<text x="700" y="60" text-anchor="middle" class="p w">Agate</text>
+<g stroke="#9C2F63" stroke-width="2" fill="none">
+<path d="M84 160 H374" marker-end="url(#a)"/>
+<path d="M384 160 H694" marker-end="url(#a)"/>
+<path d="M696 330 H386" marker-end="url(#a)"/>
+<path d="M376 410 H86" marker-end="url(#a)"/>
+</g>
+<text x="229" y="150" text-anchor="middle">user name / password</text>
+<text x="539" y="150" text-anchor="middle">user name / password</text>
+<text x="539" y="180" text-anchor="middle">application name / key</text>
+<text x="539" y="320" text-anchor="middle">ticket ID</text>
+<text x="229" y="400" text-anchor="middle">session ID</text>
+<g class="l"><path d="M704 180 h24 v22 h-20" marker-end="url(#s)"/><path d="M704 230 h24 v22 h-20" marker-end="url(#s)"/><path d="M704 280 h24 v22 h-20" marker-end="url(#s)"/><path d="M384 350 h24 v22 h-20" marker-end="url(#s)"/></g>
+<text x="740" y="196" class="m">application check</text>
+<text x="740" y="240" class="m">user check (active and has</text><text x="740" y="256" class="m">access to application)</text>
+<text x="740" y="296" class="m">user authentication</text>
+<text x="420" y="366" class="m">user session creation</text>
+</svg>

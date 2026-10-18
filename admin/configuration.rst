@@ -270,9 +270,15 @@ Agate offers a notification emails service to the registered applications. Based
 
 Some templates are provided by default: see `default templates <https://github.com/obiba/agate/tree/master/agate-webapp/src/main/resources/_templates/notifications>`_ directory. To override these default templates, the new templates are to be defined in the **AGATE_HOME/conf/templates/notifications/** directory, using the same file names and directory structure.
 
-The email templates specific to an application are located in the directory **<templates folder>/notifications/<application name>**.
+The email templates specific to an application are located in the directory **<templates folder>/notifications/<application>**, where **<application>** is the name the application uses to authenticate with Agate (usually the application ID, e.g. ``mica``). An application can also be given a fallback templates folder: the templates missing in the application's folder are then taken from this fallback folder (see :ref:`applications_management`).
 
-The template engine used for building the email messages is `FreeMarker <https://freemarker.apache.org/>`_. The default templates are in HTML format, but they could also be written in plain text.
+The template engine used for building the email messages is `FreeMarker <https://freemarker.apache.org/>`_. The default templates are in HTML format, but they could also be written in plain text. Localized variants of a template can be defined by suffixing the file name with the language, e.g. **confirmationEmail_fr.ftl**.
+
+The notification templates can also be edited from the administration user interface: Agate's own templates in the :ref:`administration` page and the application ones in the application page (see :ref:`applications_management`). The edited templates are saved in the **AGATE_HOME/conf/templates/notifications/** directory, which must then be writable by the user running Agate.
+
+.. note::
+
+  As the templates can be edited by the administrators, the FreeMarker engine is configured to forbid instantiating arbitrary Java classes (``?new`` built-in) and accessing the Java API of the objects (``?api`` built-in).
 
 Reverse Proxy Configuration
 ---------------------------
